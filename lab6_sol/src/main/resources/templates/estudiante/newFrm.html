@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de usuarios</title>
+  <div th:insert="~{fragments/general.html :: estilo}"></div>
+</head>
+<body>
+<div class="container">
+  <div th:insert="~{fragments/general.html :: header}"></div>
+  <h1>Nuevo Estudiante</h1>
+  <a href="#">Nuevo Estudiante</a>
+
+  <div class="row mb-4">
+    <div class="col-md-6 offset-md-3">
+      <h2>Nuevo Empleado</h2>
+      <hr/>
+      <form th:action="@{'/estudiante/save'}" method="post">
+        <div class="mb-3">
+          <label for="firstname" class="form-label">Nombre</label>
+          <input type="text" class="form-control" name="firstname" id="firstname"/>
+        </div>
+        <div class="mb-3">
+          <label for="lastname" class="form-label">Apellido</label>
+          <input type="text" class="form-control" name="lastname" id="lastname"/>
+        </div>
+        <div class="mb-3">
+          <label for="dni" class="form-label">DNI</label>
+          <input type="text" class="form-control" name="dni" id="dni"/>
+        </div>
+
+        <div class="mb-3">
+          <label for="age" class="form-label">Edad</label>
+          <input type="text" class="form-control" name="age" id="age"/>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo</label>
+          <input type="text" class="form-control" name="email" id="email"/>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Contraseña</label>
+          <input type="text" class="form-control" name="password" id="password"/>
+        </div>
+        <a th:href="@{'/employee'}" class="btn btn-danger">Cancelar</a>
+        <button type="submit" class="btn btn-primary">Registrar</button>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

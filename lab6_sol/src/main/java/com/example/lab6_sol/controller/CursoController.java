@@ -1,9 +1,7 @@
 package com.example.lab6_sol.controller;
 
 import com.example.lab6_sol.entity.Curso;
-import com.example.lab6_sol.entity.Usuario;
 import com.example.lab6_sol.repository.CursoRepository;
-import com.example.lab6_sol.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
